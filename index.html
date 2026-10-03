@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Смайылова Күлжамила | Жеке сайт</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #e8f5f0;
+            color: #174d3d;
+        }
+
+        header {
+            background: #087f5b;
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 34px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        nav {
+            background: #064e3b;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #a7f3d0;
+        }
+
+        section {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 35px;
+            background: white;
+            border-left: 6px solid #10a37f;
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(0, 80, 60, 0.12);
+        }
+
+        section h2 {
+            color: #087f5b;
+            margin-top: 0;
+        }
+
+        .intro {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .circle {
+            min-width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: #10a37f;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .intro-text {
+            flex: 1;
+        }
+
+        .hobby-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .hobby {
+            padding: 25px;
+            background: #f0faf6;
+            border-radius: 12px;
+            border: 1px solid #9adbc8;
+        }
+
+        .hobby h3 {
+            color: #087f5b;
+            margin-top: 0;
+        }
+
+        .contact-box {
+            background: #f0faf6;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin: 12px 0;
+            border: 1px solid #7bc9b2;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: 2px solid #10a37f;
+        }
+
+        button {
+            padding: 13px 25px;
+            border: none;
+            border-radius: 6px;
+            background: #087f5b;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #064e3b;
+        }
+
+        #message,
+        #result {
+            font-weight: bold;
+            color: #087f5b;
+        }
+
+        footer {
+            background: #064e3b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        /* Телефонға бейімдеу */
+        @media (max-width: 600px) {
+
+            nav a {
+                display: block;
+                margin: 12px 0;
+            }
+
+            .intro {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hobby-list {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                margin: 18px;
+                padding: 25px;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Басты бөлік -->
+    <header>
+        <h1>Смайылова Күлжамила</h1>
+        <p>Студент | Цифрлық технологиялар бағыты</p>
+    </header>
+
+
+    <!-- Навигация -->
+    <nav>
+        <a href="#about">Мен туралы</a>
+        <a href="#skills">Қызығушылықтар</a>
+        <a href="#contact">Кері байланыс</a>
+    </nav>
+
+
+    <!-- Мен туралы -->
+    <section id="about">
+
+        <div class="intro">
+
+            <div class="circle">
+                К
+            </div>
+
+            <div class="intro-text">
+
+                <h2>Мен туралы</h2>
+
+                <p>
+                    Менің есімім — Смайылова Күлжамила.
+                    Мен Қазақ ұлттық қыздар педагогикалық университетінің
+                    3-курс студентімін.
+                </p>
+
+                <p>
+                    Қазіргі таңда цифрлық технологиялар саласына
+                    байланысты білім алып жүрмін. Университеттегі
+                    сабақтарда әртүрлі цифрлық құралдармен жұмыс
+                    жасап, өзіме жаңа нәрселер үйренуге тырысамын.
+                </p>
+
+                <button onclick="showMessage()">
+                    Батырманы бас
+                </button>
+
+                <p id="message"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Қызығушылықтар -->
+    <section id="skills">
+
+        <h2>Қызығушылықтарым</h2>
+
+        <div class="hobby-list">
+
+            <div class="hobby">
+                <h3>🌐 Веб-дизайн</h3>
+
+                <p>
+                    Веб-сайттардың сыртқы көрінісін жасағанды
+                    және HTML мен CSS арқылы жұмыс істегенді
+                    ұнатамын.
+                </p>
+            </div>
+
+
+            <div class="hobby">
+                <h3>💻 IT</h3>
+
+                <p>
+                    Бағдарламалау саласына қызығушылығым бар.
+                    Жаңа бағдарламалар мен технологияларды
+                    үйреніп жүрмін.
+                </p>
+            </div>
+
+
+            <div class="hobby">
+                <h3>🛍️ Шоппинг</h3>
+
+                <p>
+                    Бос уақытымда дүкен аралап, өзіме ұнайтын
+                    киімдер мен басқа да заттарды таңдағанды
+                    ұнатамын.
+                </p>
+            </div>
+
+
+            <div class="hobby">
+                <h3>🌸 Құрбыларыммен серуендеу</h3>
+
+                <p>
+                    Құрбыларыммен бірге қалада серуендеп,
+                    қызықты жерлерге барып, әңгімелесіп
+                    уақыт өткізгенді жақсы көремін.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Байланыс -->
+    <section id="contact">
+
+        <h2>Кері байланыс</h2>
+
+        <div class="contact-box">
+
+            <p>
+                Атыңызды енгізіп, батырманы басып көріңіз:
+            </p>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Атыңызды жазыңыз..."
+            >
+
+            <button onclick="sendMessage()">
+                Жіберу
+            </button>
+
+            <p id="result"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Смайылова Күлжамила</p>
+
+        <p>
+            Жеке визитка сайты
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function showMessage() {
+
+            document.getElementById("message").textContent =
+                "Сайтыма кіргеніңізге рақмет! 🌿";
+
+        }
+
+
+        function sendMessage() {
+
+            let name = document.getElementById("name").value;
+
+            if (name.trim() === "") {
+
+                document.getElementById("result").textContent =
+                    "Алдымен атыңызды жазыңыз.";
+
+            } else {
+
+                document.getElementById("result").textContent =
+                    "Сәлем, " + name + "! Кері байланыс үшін рақмет.";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
